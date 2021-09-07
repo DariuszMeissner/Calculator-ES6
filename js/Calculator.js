@@ -9,7 +9,18 @@ class Calculator {
     this.resultNumberArray = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     this.initEvents();
   }
-
+  /**Abstract method Show tooltip */
+  showTooltip() {
+    console.error(
+      "Powinieneś zaimplementować tę metodę w klasie dziedziczącej. "
+    );
+  }
+  /**Abstract method hide tooltip */
+  hideTooltip() {
+    console.error(
+      "Powinieneś zaimplementować tę metodę w klasie dziedziczącej. "
+    );
+  }
   /* Abstract method add numbers in two array
    *  @param {array} numberX First number
    *  @param {array} numberY Second number
