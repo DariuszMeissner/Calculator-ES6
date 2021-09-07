@@ -7,6 +7,7 @@ class Calculator {
     this.firstNumberArray = [];
     this.secondNumberArray = [];
     this.resultNumberArray = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    this.operator = document.querySelector('.popover');
     this.initEvents();
   }
   /**Abstract method Show tooltip */
