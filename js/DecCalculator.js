@@ -44,11 +44,14 @@ class DecCalculator extends Calculator {
     return result;
   }
 
-  /** Metod showtooltip */
+  /** Metod showTooltip */
   showTooltip(text) {
-    const operator = document.querySelector('.popover')
-    operator.classList.add('show');
-    operator.innerText = text;
+    this.operator.classList.add('show');
+    this.operator.innerText = text;
+  }
+  /** Metod hideTooltip */
+  hideTooltip() {
+    this.operator.classList.remove('show');
   }
   /** Method permitting insert numbers*/ 
   changeNumber(root) {
@@ -64,6 +67,7 @@ class DecCalculator extends Calculator {
       if (event.target.parentElement.classList.contains("operator-bar")) {
         this.checkNumber();
         this.updateResult();
+        this.hideTooltip();
       } else {
         this.checkNumber();
       }
