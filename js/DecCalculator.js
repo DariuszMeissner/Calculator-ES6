@@ -47,7 +47,7 @@ class DecCalculator extends Calculator {
   /** Metod showTooltip */
   showTooltip(text) {
     this.operator.classList.add('show');
-    this.operator.innerText = text;
+    this.operator.lastElementChild.innerText = text;
   }
   /** Metod hideTooltip */
   hideTooltip() {
@@ -57,7 +57,7 @@ class DecCalculator extends Calculator {
   changeNumber(root) {
     root.setAttribute("contenteditable", "true");
     root.classList.add("active");
-    this.showTooltip('Click to see result');
+    this.showTooltip('Click here to see result');
   }
 
   /*Method displaying result of adding numbers  */
