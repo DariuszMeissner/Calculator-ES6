@@ -43,11 +43,18 @@ class DecCalculator extends Calculator {
       }
 
       changeNumber(root) {
-        const input = root.firstElementChild;
-        input.innerText = +input.innerText < 9 ? ++input.innerText : 0;
+        root.setAttribute('contenteditable', 'true');
     
-        this.checkNumber();
-        this.updateResult();
+      }
+
+      initEvents() {
+          super.initEvents();
+          this.$calculatorDOMElement.addEventListener("click", event => {
+            if (event.target.parentElement.classList.contains("operator-bar")) {
+              this.checkNumber();
+              this.updateResult();
+            }
+          });
       }
 }
 
