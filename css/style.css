@@ -65,3 +65,11 @@ form .operator-bar {
 .group-number:nth-child(9) .display-number {
   display: none;
 }
+
+.warning-popover {
+  display: none;
+}
+
+.warning-popover.show {
+  display: block !important;
+}
