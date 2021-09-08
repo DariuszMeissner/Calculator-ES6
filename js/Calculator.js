@@ -22,6 +22,12 @@ class Calculator {
       "Powinieneś zaimplementować tę metodę w klasie dziedziczącej. "
     );
   }
+  /** Abstract method warning */
+  warning() {
+    console.error(
+      "Powinieneś zaimplementować tę metodę w klasie dziedziczącej. "
+    );
+  }
   /* Abstract method add numbers in two array
    *  @param {array} numberX First number
    *  @param {array} numberY Second number
