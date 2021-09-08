@@ -49,25 +49,39 @@ class DecCalculator extends Calculator {
     this.operator.classList.add('show');
     this.operator.lastElementChild.innerText = text;
   }
+
   /** Metod hideTooltip */
   hideTooltip() {
     this.operator.classList.remove('show');
   }
+
   /** Method permitting insert numbers*/ 
   changeNumber(root) {
     root.setAttribute("contenteditable", "true");
     root.classList.add("active");
     this.showTooltip('Click here to see result');
+    
+
   }
 
-  /*Method displaying result of adding numbers  */
+  checkNumber() {
+    super.checkNumber();
+    return this.resultNumberArray.every( el => {
+      return typeof el ==='number' && el < 10 && el >=0;
+    })
+  }
+
+  /*Handling event, click 'plus' icon - displaying result  */
   initEvents() {
     super.initEvents();
     this.$calculatorDOMElement.addEventListener("click", (event) => {
       if (event.target.parentElement.classList.contains("operator-bar")) {
-        this.checkNumber();
-        this.updateResult();
-        this.hideTooltip();
+        if(this.checkNumber() === true) {
+          this.updateResult();
+          this.hideTooltip();
+        } else {
+         console.log('error');
+        }
       } else {
         this.checkNumber();
       }
