@@ -68,8 +68,17 @@ form .operator-bar {
 
 .warning-popover {
   display: none;
+  color: red;
+  font-size: 14px;
 }
 
 .warning-popover.show {
-  display: block !important;
+  display: flex;
+  justify-content: center;
+}
+
+.warning-info {
+  padding: .6rem;
+  border-radius: 5px;
+  border: 1px solid red;
 }
