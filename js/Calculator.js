@@ -8,6 +8,7 @@ class Calculator {
     this.secondNumberArray = [];
     this.resultNumberArray = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     this.operator = document.querySelector('.popover');
+    this.warning = document.querySelector('.warning-popover');
     this.initEvents();
   }
   /**Abstract method Show tooltip */
@@ -23,7 +24,13 @@ class Calculator {
     );
   }
   /** Abstract method warning */
-  warning() {
+  showWarning() {
+    console.error(
+      "Powinieneś zaimplementować tę metodę w klasie dziedziczącej. "
+    );
+  }
+  
+  hideWarning() {
     console.error(
       "Powinieneś zaimplementować tę metodę w klasie dziedziczącej. "
     );
