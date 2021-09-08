@@ -44,6 +44,16 @@ class DecCalculator extends Calculator {
     return result;
   }
 
+  showWarning() {
+    console.log('error');
+    this.warning.classList.add('show');
+  }
+  
+  hideWarning() {
+    console.log('done');
+    this.warning.classList.remove('show');
+  }
+
   /** Metod showTooltip */
   showTooltip(text) {
     this.operator.classList.add('show');
@@ -59,7 +69,7 @@ class DecCalculator extends Calculator {
   changeNumber(root) {
     root.setAttribute("contenteditable", "true");
     root.classList.add("active");
-    this.showTooltip('Click here to see result');
+    this.showTooltip('Kliknij aby zobaczyć wynik');
     
 
   }
@@ -79,8 +89,10 @@ class DecCalculator extends Calculator {
         if(this.checkNumber() === true) {
           this.updateResult();
           this.hideTooltip();
+          this.hideWarning();
         } else {
-         console.log('error');
+          this.hideTooltip();
+          this.showWarning();
         }
       } else {
         this.checkNumber();
