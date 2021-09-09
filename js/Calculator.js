@@ -7,9 +7,34 @@ class Calculator {
     this.firstNumberArray = [];
     this.secondNumberArray = [];
     this.resultNumberArray = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    this.operator = document.querySelector('.popover');
+    this.warning = document.querySelector('.warning-popover');
     this.initEvents();
   }
-
+  /**Abstract method Show tooltip */
+  showTooltip() {
+    console.error(
+      "Powinieneś zaimplementować tę metodę w klasie dziedziczącej. "
+    );
+  }
+  /**Abstract method hide tooltip */
+  hideTooltip() {
+    console.error(
+      "Powinieneś zaimplementować tę metodę w klasie dziedziczącej. "
+    );
+  }
+  /** Abstract method warning */
+  showWarning() {
+    console.error(
+      "Powinieneś zaimplementować tę metodę w klasie dziedziczącej. "
+    );
+  }
+  
+  hideWarning() {
+    console.error(
+      "Powinieneś zaimplementować tę metodę w klasie dziedziczącej. "
+    );
+  }
   /* Abstract method add numbers in two array
    *  @param {array} numberX First number
    *  @param {array} numberY Second number
