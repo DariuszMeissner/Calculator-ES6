@@ -1,3 +1,5 @@
+<img src="/assets/project-complete.png" alt="alt text" width="500" />
+
 # Decimal Calculator
 Calculator from workshop Coders Lab school.
 
