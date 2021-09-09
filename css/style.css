@@ -65,3 +65,20 @@ form .operator-bar {
 .group-number:nth-child(9) .display-number {
   display: none;
 }
+
+.warning-popover {
+  display: none;
+  color: red;
+  font-size: 14px;
+}
+
+.warning-popover.show {
+  display: flex;
+  justify-content: center;
+}
+
+.warning-info {
+  padding: .6rem;
+  border-radius: 5px;
+  border: 1px solid red;
+}
