@@ -3,9 +3,5 @@ import DecCalculator from "./DecCalculator";
 
 document.addEventListener("DOMContentLoaded", () => {
   const bitCalc = new BinaryCalculator(".binary-calculator");
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
   const decCalc = new DecCalculator(".dec-calculator");
 });
